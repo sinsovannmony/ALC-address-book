@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>listall</title>
+    <link href="style.css" rel="stylesheet" as="style" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Dosis|Inconsolata" rel="stylesheet">
+    <script src="src/model.js"></script>
+    <script src="src/cntrl.js"></script>
+    <script src="src/listview.js"></script>
+    <script>'use strict';</script>
+    <script>window.addEventListener("load", cnt.view.listcontacts.setupUserInterface);</script>
+</head>
+<body>
+<div id="head">
+    <h1>Address book</h1>
+</div>
+<div id="first">
+    <div id="main"><h1 id="tab">Contacts List</h1>
+        <table id="contacts">
+            <thead>
+            <tr>
+                <th>NAME</th>
+                <th>NUMBER</th>
+                <th>MAIL</th>
+            </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <p>click <a href="index.html">here</a> to return to homepage</p>
+    </div>
+</div>
+<div id="second">
+    <div id="main2">
+        <img src="img/contact.png" id="mage2">
+        <p id="conname"></p>
+        <p id="connum"></p>
+        <p id="conmail"></p>
+        <p>click <a href="index.html">here</a> to return to homepage</p>
+    </div>
+</div>
+<div class="footer">
+    <p id="cb">by jola</p>
+</div>
+</body>
+</html>

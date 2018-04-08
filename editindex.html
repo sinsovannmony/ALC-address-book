@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>edit contact</title>
+    <link href="style.css" rel="stylesheet" as="style" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Dosis|Inconsolata" rel="stylesheet">
+    <script src="src/model.js"></script>
+    <script src="src/cntrl.js"></script>
+    <script src="src/uview.js"></script>
+    <script>'use strict';</script>
+    <script>window.addEventListener("load", cnt.view.updateContact.setupUserInterface);</script>
+</head>
+<body>
+<div id="head">
+    <h1>Address book</h1>
+</div>
+<div id="main">
+    <form id="Contact">
+
+        <h1>Update Contact Info</h1>
+
+        <label for="contactes">Select Contact</label>
+        <select id="contactes" name="selectContact">
+            <option value=""> --- </option>
+        </select>
+
+        <h1>Create a new contact</h1>
+        <label for="namee">Full Name</label>
+        <input type="text" id="namee" name="contactname" readonly="readonly">
+
+        <label for="num">Phone Number</label>
+        <input type="text" id="num" name="number">
+
+        <label for="emaile">E-mail Address</label>
+        <input type="text" id="emaile" name="email">
+
+        <input type="submit" value="Save Changes" name="commit">
+    </form>
+    <p>click <a href="index.html">here</a> to return to homepage</p>
+</div>
+<div class="footer">
+    <p id="cb">by jola</p>
+</div>
+</body>
+</html>

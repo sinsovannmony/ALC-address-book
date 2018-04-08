@@ -1,0 +1,92 @@
+#main {
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    width: 600px;
+    padding: 20px 15px 15px 15px;
+    margin: auto;
+    text-align: center;
+}
+#main2  {
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    width: 300px;
+    padding: 20px 15px 15px 15px;
+    margin: auto;
+    text-align: center;
+}
+.mage  {
+    width: 30px;
+    height: 30px;
+}
+#mage2  {
+    width: 50px;
+    height: 50px;
+}
+#mage  {
+    text-align: center;
+    font-family: 'Inconsolata', monospace;
+    font-size: 30px;
+}
+#head  {
+    text-align: center;
+    font-family: 'Dosis', sans-serif;
+}
+#Contact  {
+    text-align: center;
+}
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+#tab {
+    text-align: center;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+a:link, a:visited {
+    background-color: #f44336;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+}
+
+
+a:hover, a:active {
+    background-color: red;
+}
+#cb  {
+    color: #f44336;
+    font-size: 12px;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    text-align: center;
+}
