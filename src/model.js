@@ -1,6 +1,7 @@
 function Contact(user) {
     this.name = user.name;
     this.num = user.num;
+    this.imaage = user.imaage;
     this.mail = user.mail;
 }
 Contact.instances = {};
@@ -54,6 +55,9 @@ Contact.update = function(user) {
     var contact = Contact.instances[user.name];
     if (contact.num !== user.num) {
         contact.num = user.num;
+    }
+    if (contact.imaage !== user.imaage) {
+        contact.imaage = user.imaage;
     }
     if (contact.mail !== user.mail) {
         contact.mail = user.mail;

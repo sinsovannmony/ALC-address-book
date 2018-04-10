@@ -16,6 +16,7 @@ cnt.view.createContact = {
         var user = {
             name: InputInfo.name.value,
             num: InputInfo.num.value,
+            imaage: InputInfo.imaage.value,
             mail: InputInfo.mail.value
         };
         Contact.add(user);

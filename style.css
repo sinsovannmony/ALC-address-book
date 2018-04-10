@@ -1,3 +1,7 @@
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
 #main {
     border: 1px solid #dddddd;
     border-radius: 10px;
@@ -6,6 +10,7 @@
     margin: auto;
     text-align: center;
 }
+
 #main2  {
     border: 1px solid #dddddd;
     border-radius: 10px;
@@ -14,26 +19,32 @@
     margin: auto;
     text-align: center;
 }
+
 .mage  {
     width: 30px;
     height: 30px;
 }
+
 #mage2  {
     width: 50px;
     height: 50px;
 }
+
 #mage  {
     text-align: center;
     font-family: 'Inconsolata', monospace;
     font-size: 30px;
 }
+
 #head  {
     text-align: center;
     font-family: 'Dosis', sans-serif;
 }
+
 #Contact  {
     text-align: center;
 }
+
 input[type=text], select {
     width: 100%;
     padding: 12px 20px;
@@ -58,9 +69,11 @@ input[type=submit] {
 input[type=submit]:hover {
     background-color: #45a049;
 }
+
 #tab {
     text-align: center;
 }
+
 table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
@@ -74,7 +87,7 @@ td, th {
 }
 
 a:link, a:visited {
-    background-color: #f44336;
+    background-color: #f44340;
     color: white;
     text-decoration: none;
     display: inline-block;
@@ -84,8 +97,9 @@ a:link, a:visited {
 a:hover, a:active {
     background-color: red;
 }
+
 #cb  {
-    color: #f44336;
+    color: #f44340;
     font-size: 12px;
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
     text-align: center;
