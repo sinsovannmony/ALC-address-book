@@ -3,14 +3,17 @@ cnt.view.updateContact = {
         var formEl = document.forms['Contact'],
             saveButton = formEl.commit,
             selectContactEl = formEl.selectContact;
+
         var key = "",
             keys = [],
             contact = null,
             optionEl = null,
             i = 0;
+
         // load all contact objects
         Contact.loadAll();
-        // populate the selection list with contacts
+
+        // populate the selection list with the contact info
         keys = Object.keys(Contact.instances);
         for (i = 0; i < keys.length; i++) {
             key = keys[i];
@@ -20,7 +23,8 @@ cnt.view.updateContact = {
             optionEl.value = contact.name;
             selectContactEl.add(optionEl, null);
         }
-        // when a contact is selected, populate the form with the contact data
+
+        // when a contact is selected, populate the form with the contact info
         selectContactEl.addEventListener("change", function() {
             var contact = null,
                 key = selectContactEl.value;
@@ -33,12 +37,14 @@ cnt.view.updateContact = {
                 formEl.reset();
             }
         });
+
         saveButton.addEventListener("click",
             cnt.view.updateContact.handleSaveButtonClickEvent);
         window.addEventListener("beforeunload", function() {
             Contact.saveAll();
         });
     },
+
     // save data
     handleSaveButtonClickEvent: function() {
         var formEl = document.forms['Contact'];

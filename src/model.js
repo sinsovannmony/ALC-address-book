@@ -1,15 +1,21 @@
+//create the contact object
 function Contact(user) {
     this.name = user.name;
     this.num = user.num;
     this.imaage = user.imaage;
     this.mail = user.mail;
 }
+
+// contact instance
 Contact.instances = {};
+
+//create new object for new contact row
 Contact.convertRow2Obj = function(controw) {
     var contact = new Contact(controw);
     return contact;
 };
 
+//load all the contact
 Contact.loadAll = function() {
     var key = "",
         keys = [],
@@ -33,6 +39,8 @@ Contact.loadAll = function() {
         }
     }
 };
+
+//save all input.
 Contact.saveAll = function() {
     var contactStr = "",
         error = false,
@@ -46,25 +54,15 @@ Contact.saveAll = function() {
     }
     if (!error) console.log(nmrOfContact + " Details saved.");
 };
+
+//add new contact info
 Contact.add = function(user) {
     var contact = new Contact(user);
     Contact.instances[user.name] = contact;
     console.log("Contact " + user.name + " created!");
 };
-Contact.update = function(user) {
-    var contact = Contact.instances[user.name];
-    if (contact.num !== user.num) {
-        contact.num = user.num;
-    }
-    if (contact.imaage !== user.imaage) {
-        contact.imaage = user.imaage;
-    }
-    if (contact.mail !== user.mail) {
-        contact.mail = user.mail;
-    }
-    console.log("Contact" + user.name + " modified!");
-};
-//  Delete a book row from persistent storage
+
+//  Delete a contact from the object
 Contact.destroy = function(name) {
     if (Contact.instances[name]) {
         console.log("Contact " + name + " deleted");
@@ -73,3 +71,19 @@ Contact.destroy = function(name) {
         console.log("There is no contact with this name " + name + " in the database!");
     }
 };
+
+//update contact info
+Contact.update = function(user) {
+    var contact = Contact.instances[user.name];
+    if (contact.num !== user.num) {
+        contact.num = user.num;
+    }
+    if (contact.mail !== user.mail) {
+        contact.mail = user.mail;
+    }
+    if (contact.imaage !== user.imaage) {
+        contact.imaage = user.imaage;
+    }
+    console.log("Contact" + user.name + " modified!");
+};
+

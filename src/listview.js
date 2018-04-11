@@ -6,6 +6,7 @@ cnt.view.listcontacts = {
             key = "",
             row = {},
             i = 0;
+
         Contact.loadAll();
         keys = Object.keys(Contact.instances);
         for (i = 0; i < keys.length; i++) {

@@ -7,9 +7,11 @@ cnt.view.deleteContact = {
             contact = null,
             optionEl = null,
             i = 0;
-        // load all the contact objects
+
+        // load all the contacts
         Contact.loadAll();
         keys = Object.keys(Contact.instances);
+
         // populate the selection list with all the contacts
         for (i = 0; i < keys.length; i++) {
             key = keys[i];
