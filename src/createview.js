@@ -27,3 +27,10 @@ cnt.view.createContact = {
         InputInfo.reset();
     }
 };
+if (y === "" || y === null)  {
+    x.src = "img/cont.png"
+}
+else {
+    x.src = Contact.instances[key].imaage;
+}
+

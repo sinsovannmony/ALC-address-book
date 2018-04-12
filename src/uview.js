@@ -33,6 +33,7 @@ cnt.view.updateContact = {
                 formEl.number.value = contact.num;
                 formEl.contactname.value = contact.name;
                 formEl.email.value = contact.mail;
+                formEl.imaage.value = contact.imaage;
             } else {
                 formEl.reset();
             }
@@ -51,7 +52,8 @@ cnt.view.updateContact = {
         var user = {
             name: formEl.contactname.value,
             num: formEl.number.value,
-            mail: formEl.email.value
+            mail: formEl.email.value,
+            imaage: formEl.imaage.value
         };
         Contact.update(user);
         formEl.reset();
