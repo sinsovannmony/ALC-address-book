@@ -7,30 +7,39 @@ cnt.view.createContact = {
 
         // Set an event handler for the save/submit button
         saveButton.addEventListener("click",
-            cnt.view.createContact.handleSaveButtonClickEvent);
+            cnt.view.createContact.valforminput);
+
         window.addEventListener("beforeunload", function() {
             Contact.saveAll();
         });
     },
 
-    // saves user input data
-    handleSaveButtonClickEvent: function() {
+    //validate the form
+    valforminput: function() {
         var InputInfo = document.forms['Contact'];
+        var saveButton = document.forms['Contact'].commit;
         var user = {
             name: InputInfo.name.value,
             num: InputInfo.num.value,
             imaage: InputInfo.imaage.value,
             mail: InputInfo.mail.value
         };
+        if (InputInfo.name.value === "" && InputInfo.num.value === "") {
 
-        Contact.add(user);
-        InputInfo.reset();
+            saveButton.disabled = true;
+            alert("Ensure you input contact name and number");
+
+        }
+
+        else {
+            saveButton.disabled = false;
+            // saves user input data
+            Contact.add(user);
+            InputInfo.reset();
+        }
+
     }
-};
-if (y === "" || y === null)  {
-    x.src = "img/cont.png"
-}
-else {
-    x.src = Contact.instances[key].imaage;
-}
 
+
+
+};
