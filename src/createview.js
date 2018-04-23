@@ -7,15 +7,15 @@ cnt.view.createContact = {
 
         // Set an event handler for the save/submit button
         saveButton.addEventListener("click",
-            cnt.view.createContact.valforminput);
+            cnt.view.createContact.handleSaveButtonClickEvent);
 
         window.addEventListener("beforeunload", function() {
             Contact.saveAll();
         });
     },
 
-    //validate the form
-    valforminput: function() {
+    // saves user input data
+    handleSaveButtonClickEvent: function() {
         var InputInfo = document.forms['Contact'];
         var saveButton = document.forms['Contact'].commit;
         var user = {
@@ -32,14 +32,12 @@ cnt.view.createContact = {
         }
 
         else {
+
             saveButton.disabled = false;
-            // saves user input data
             Contact.add(user);
             InputInfo.reset();
+
+
         }
-
     }
-
-
-
 };
